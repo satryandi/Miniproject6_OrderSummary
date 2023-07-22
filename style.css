@@ -1,0 +1,226 @@
+/* CSS Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+/* General Styling */
+:root {
+  /* Colors */
+  /* Primary */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+
+  /* Typography */
+  /* Body Copy */
+  --fs-main: 16px;
+
+  /* Font */
+  --ff-primary: 'Red Hat Display', sans-serif;
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+
+body {
+  color: var(--Desaturated-blue);
+  background-color: var(--Pale-blue);
+  font-family: var(--ff-primary);
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order_card {
+  width: 250px;
+  height: 350px;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  font-size: 10px;
+  overflow: hidden;
+  gap: .5rem;
+}
+
+.order_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+}
+
+.order_title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: .5rem;
+  padding: 0 2rem 0;
+}
+
+.order_title h2 {
+  color: var(--Dark-blue);
+  font-weight: var(--fw-900);
+}
+
+.order_details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Very-pale-blue);
+  border-radius: .5rem;
+  margin: 0 1.5rem;
+  height: 3rem;
+  padding: 0 1rem 0;
+}
+
+.order_plan {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.order_plan img {
+  width: 20%;
+}
+
+.order_plan div {
+  line-height: 1rem;
+}
+
+.plan_title {
+  color: var(--Dark-blue);
+  font-weight: var(--fw-900);
+}
+
+.plan_link {
+  color: var(--Bright-blue);
+}
+
+.order_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: .5rem;
+  padding: 0 1rem 0;
+}
+
+.btn_submit {
+  color: white;
+  background-color: var(--Bright-blue);
+  border: none;
+  border-radius: .5rem;
+  width: 100%;
+  height: 1.5rem;
+}
+
+.btn_cancel {
+  color: var(--Desaturated-blue);
+  background-color: white;
+  border: none;
+  border-radius: .5rem;
+  width: 100%;
+  height: 1.5rem;
+}
+
+.btn_submit:hover,
+.btn_cancel:hover,
+.plan_link:hover {
+  cursor: pointer;
+}
+
+.btn_submit:hover {
+  background-color: hsl(245, 75%, 62%);
+}
+
+.btn_cancel:hover {
+  color: red;
+}
+
+@media(max-width:500px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+}
